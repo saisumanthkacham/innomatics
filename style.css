@@ -1,0 +1,28 @@
+#personsDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#displayDiv{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #fefefe;
+    margin: 15% 5%; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    flex-wrap:wrap;
+}
+
