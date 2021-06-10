@@ -25,4 +25,7 @@
     width: 80%;
     flex-wrap:wrap;
 }
+.wrong{
+   margin: 0.5rem 0.5rem 0.5rem 3rem;
+}
 

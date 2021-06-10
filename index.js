@@ -1,12 +1,11 @@
 
 
-
-
 var btn=$('#fetch')
 
 // dom element we are trying to manipulate in order to show data on front end
 let persons=$('#personsDiv')
 let person= $('#displayDiv')
+
 
 btn.click(()=>{
     try{
@@ -46,8 +45,8 @@ btn.click(()=>{
 function userDetailsFn(id){
 
 try{
-    console.log("loading user specific data")
-    console.log(id)
+   
+   
     $.ajax({
         url:`https://ghibliapi.herokuapp.com/people/${id}`,
         dataType:"json",
@@ -57,7 +56,7 @@ try{
         success: (userData)=>{
             person[0].style.display="flex";
             console.log({userData,person})
-            person[0].innerHTML= `<ul>
+            person[0].innerHTML= `<button onclick="closeFn()">x</button> <ul>
                     <div>name:${userData.name}</div>
                     <div>age:${userData.age}</div>
                     <div>gender:${userData.gender}</div>
@@ -80,3 +79,6 @@ catch(err){
 
 }
 
+function closeFn(){
+    person[0].style.display="none";
+}
