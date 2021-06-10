@@ -24,10 +24,6 @@ btn.click(()=>{
                 
                 let names= data.map(item=>`<button value =${item.id} onclick="userDetailsFn(value)">${item.name}</button>`)
   
-
-                
-
-    
                 console.log(data)
                 // manipulating the dom element and storing names inside it using innerHTMl
                 persons[0].innerHTML=names
@@ -62,11 +58,11 @@ try{
             person[0].style.display="flex";
             console.log({userData,person})
             person[0].innerHTML= `<ul>
-                    <li>name:${userData.name}</li>
-                    <li>age:${userData.age}</li>
-                    <li>gender:${userData.gender}</li>
-                    <li>eye-color:${userData.eye_color}</li>
-                    <li>hair-color:${userData.hair_color}</li>
+                    <div>name:${userData.name}</div>
+                    <div>age:${userData.age}</div>
+                    <div>gender:${userData.gender}</div>
+                    <div>eye-color:${userData.eye_color}</div>
+                    <div>hair-color:${userData.hair_color}</div>
                     
                 </ul>
                 ${userData.films.map(item=>item)}`
